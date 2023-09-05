@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFPRODISPLAYREGULAR.OTF">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="UserInfoVC" id="Y6W-OH-hqX" customClass="UserInfoVC" customModule="TaskBrainStorm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7uS-ec-ORJ">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MlY-Oj-wF3">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="193"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="193" id="6hP-4V-jcx"/>
+                                        </constraints>
+                                        <standardMapConfiguration key="preferredConfiguration"/>
+                                    </mapView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sUd-Qa-pwr">
+                                        <rect key="frame" x="136.66666666666666" y="133" width="119.99999999999997" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="1pk-5w-UuJ"/>
+                                            <constraint firstAttribute="width" constant="120" id="WQ6-xj-of0"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="60"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ZLE-Rg-gfB">
+                                        <rect key="frame" x="16" y="265" width="361" height="73"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wa-Ra-WuI" userLabel="nameLabel">
+                                                <rect key="frame" x="134" y="0.0" width="93" height="24"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="20"/>
+                                                <color key="textColor" name="textBlack"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="infoLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Im-Gu-Q7L" userLabel="infoLabel">
+                                                <rect key="frame" x="157.33333333333334" y="25.999999999999996" width="46.333333333333343" height="14.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
+                                                <color key="textColor" name="textGray"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="countryLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v45-Ov-4FL" userLabel="countryLabel">
+                                                <rect key="frame" x="147.66666666666666" y="42.333333333333314" width="66" height="14.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
+                                                <color key="textColor" name="textGray"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="addressLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxD-GK-bLb" userLabel="addressLabel">
+                                                <rect key="frame" x="146.66666666666666" y="58.666666666666693" width="67.666666666666657" height="14.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
+                                                <color key="textColor" name="textGray"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3to-vh-VBE" customClass="BaseButton" customModule="TaskBrainStorm" customModuleProvider="target">
+                                        <rect key="frame" x="63" y="609" width="267" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="Qzj-M4-EEq"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Save user">
+                                            <fontDescription key="titleFontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="stateAdapter">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="saveButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="07J-Fp-4i0"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Xr-X6-mS5" userLabel="userSavedView">
+                                        <rect key="frame" x="63" y="609" width="267" height="48"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User saved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIh-6l-BTt" userLabel="nameLabel">
+                                                <rect key="frame" x="0.0" y="14.333333333333369" width="267" height="19.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                                <color key="textColor" name="textBlack"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="grayLinerFirst"/>
+                                        <constraints>
+                                            <constraint firstItem="aIh-6l-BTt" firstAttribute="centerY" secondItem="1Xr-X6-mS5" secondAttribute="centerY" id="1rA-Fw-NVo"/>
+                                            <constraint firstItem="aIh-6l-BTt" firstAttribute="centerX" secondItem="1Xr-X6-mS5" secondAttribute="centerX" id="SMj-Ip-gpr"/>
+                                            <constraint firstAttribute="height" constant="48" id="hgW-01-gMA"/>
+                                            <constraint firstAttribute="trailing" secondItem="aIh-6l-BTt" secondAttribute="trailing" id="lZG-VC-0gl"/>
+                                            <constraint firstItem="aIh-6l-BTt" firstAttribute="leading" secondItem="1Xr-X6-mS5" secondAttribute="leading" id="zEz-It-H9n"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jZ-rJ-56Y">
+                                        <rect key="frame" x="63" y="657" width="267" height="48"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="0DZ-ij-bdB"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.92156862745098034" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Remove user">
+                                            <fontDescription key="titleFontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="removeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dhE-m9-0ii"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="ZLE-Rg-gfB" firstAttribute="leading" secondItem="7uS-ec-ORJ" secondAttribute="leading" constant="16" id="2tG-lb-w40"/>
+                                    <constraint firstItem="8jZ-rJ-56Y" firstAttribute="leading" secondItem="1Xr-X6-mS5" secondAttribute="leading" id="3LW-0s-YfL"/>
+                                    <constraint firstAttribute="trailing" secondItem="3to-vh-VBE" secondAttribute="trailing" constant="63" id="6cJ-MU-Hey"/>
+                                    <constraint firstItem="3to-vh-VBE" firstAttribute="leading" secondItem="7uS-ec-ORJ" secondAttribute="leading" constant="63" id="MVg-uS-1En"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Xr-X6-mS5" secondAttribute="trailing" constant="63" id="MfO-La-Ewp"/>
+                                    <constraint firstItem="sUd-Qa-pwr" firstAttribute="centerX" secondItem="7uS-ec-ORJ" secondAttribute="centerX" id="MhT-pI-Vkl"/>
+                                    <constraint firstItem="8jZ-rJ-56Y" firstAttribute="top" secondItem="1Xr-X6-mS5" secondAttribute="bottom" id="OAr-F6-pJS"/>
+                                    <constraint firstItem="1Xr-X6-mS5" firstAttribute="leading" secondItem="7uS-ec-ORJ" secondAttribute="leading" constant="63" id="UGV-HG-qer"/>
+                                    <constraint firstItem="ZLE-Rg-gfB" firstAttribute="top" secondItem="sUd-Qa-pwr" secondAttribute="bottom" constant="12" id="UVd-ix-Wh1"/>
+                                    <constraint firstItem="MlY-Oj-wF3" firstAttribute="top" secondItem="7uS-ec-ORJ" secondAttribute="top" id="VDx-MV-BQX"/>
+                                    <constraint firstItem="MlY-Oj-wF3" firstAttribute="leading" secondItem="7uS-ec-ORJ" secondAttribute="leading" id="W5g-d6-0YZ"/>
+                                    <constraint firstItem="8jZ-rJ-56Y" firstAttribute="trailing" secondItem="1Xr-X6-mS5" secondAttribute="trailing" id="WUe-1w-Pnl"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZLE-Rg-gfB" secondAttribute="trailing" constant="16" id="kyK-1I-xtM"/>
+                                    <constraint firstItem="sUd-Qa-pwr" firstAttribute="bottom" secondItem="MlY-Oj-wF3" secondAttribute="bottom" constant="60" id="mNJ-kq-Yg7">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="60"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="bottom" secondItem="1Xr-X6-mS5" secondAttribute="bottom" constant="102" id="pIl-Ur-9ST"/>
+                                    <constraint firstAttribute="trailing" secondItem="MlY-Oj-wF3" secondAttribute="trailing" id="vYq-tm-NNo"/>
+                                    <constraint firstAttribute="bottom" secondItem="3to-vh-VBE" secondAttribute="bottom" constant="102" id="w8F-UF-rcl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7uS-ec-ORJ" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="T6B-oy-UfV"/>
+                            <constraint firstItem="7uS-ec-ORJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="aKB-nv-agD"/>
+                            <constraint firstItem="7uS-ec-ORJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ua3-RA-iem"/>
+                            <constraint firstItem="7uS-ec-ORJ" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="vy8-j2-vwM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="n73-bn-jWQ"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="XxD-GK-bLb" id="BrD-qo-Tjz"/>
+                        <outlet property="countryLabel" destination="v45-Ov-4FL" id="Seg-YF-iXY"/>
+                        <outlet property="infoLabel" destination="7Im-Gu-Q7L" id="ecy-od-Te5"/>
+                        <outlet property="mapView" destination="MlY-Oj-wF3" id="vlT-a8-XrQ"/>
+                        <outlet property="nameLabel" destination="6wa-Ra-WuI" id="kGh-Lj-rAK"/>
+                        <outlet property="removeButton" destination="8jZ-rJ-56Y" id="SQZ-XJ-HE6"/>
+                        <outlet property="saveButton" destination="3to-vh-VBE" id="at9-0L-5K8"/>
+                        <outlet property="userImageView" destination="sUd-Qa-pwr" id="RFk-aL-zcH"/>
+                        <outlet property="userSavedView" destination="1Xr-X6-mS5" id="pmU-h2-7nQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="grayLinerFirst">
+            <color red="0.9100000262260437" green="0.9100000262260437" blue="0.9100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textBlack">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textGray">
+            <color red="0.56499999761581421" green="0.61599999666213989" blue="0.65100002288818359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
